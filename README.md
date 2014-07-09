@@ -3,5 +3,5 @@ euler
 
 Project Euler problems solutions
 
-It's a fast dirty code. 
+It's a quick & dirty code. 
 Don't use it for anything.

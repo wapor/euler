@@ -3,6 +3,12 @@
 # The sum of the primes below 10 is 2 + 3 + 5 + 7 = 17.
 # Find the sum of all the primes below two million.
 
+import primes
+
+primes = primes.Primes(2000000)
+print 'Answer:', sum(primes.as_list())
+exit()
+
 import math
 
 # brutforce
@@ -30,7 +36,7 @@ print "first method (brutforce): sum: ", sum(primes[:-1])
 
 sieve = [True] * limit
 sieve[0] = False  # 1 is not prime
-sum = 0
+sum_primes = 0
 curr = 1
 while curr < limit:
     # find next prime by skipping False in the sieve
@@ -39,8 +45,6 @@ while curr < limit:
     if curr > limit:
         break  # the end
     sieve[curr - 1::curr] = [False] * (limit / curr)
-    sum += curr
-print "second method (sieve of Eratosthenes): sum: ", sum
+    sum_primes += curr
+print "second method (sieve of Eratosthenes): sum: ", sum_primes
 
-
-print sieve[0:20]

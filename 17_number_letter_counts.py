@@ -32,20 +32,16 @@ def print_num(num):
     if num in range(1, 100):
         return singles_doubles_str(num)
     elif num == 1000:
-        return "one thousand"
+        return 'one thousand'
     else:
-        s = singles[num / 100] + " hundred"
+        s = singles[num / 100] + ' hundred'
         if num % 100 != 0:
-            s += " and " + singles_doubles_str(num % 100)
+            s += ' and ' + singles_doubles_str(num % 100)
         return s
 
 limit_inclusive = 1000
-str = ""
+str = ''
 for i in xrange(1, limit_inclusive + 1):
     print print_num(i)
     str += print_num(i)
-print len(str.replace(' ', ''))
-    
-
-
-
+print '\nAnswer:', len(str.replace(' ', ''))
